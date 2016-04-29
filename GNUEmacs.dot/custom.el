@@ -67,6 +67,7 @@
  '(gdb-many-windows t)
  '(gdb-same-frame nil)
  '(global-font-lock-mode t nil (font-lock))
+ '(global-magit-file-mode t)
  '(gnus-always-read-dribble-file t)
  '(gnus-buttonized-mime-types (quote ("multipart/signed")))
  '(gnus-group-mode-hook (quote (gnus-topic-mode)))
