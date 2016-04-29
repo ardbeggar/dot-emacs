@@ -1,0 +1,24 @@
+(defconst config:base-dir
+  (expand-file-name
+   (let ((version (emacs-version)))
+	 (cond
+	  ((string-match "^GNU Emacs" version) "~/.GNUEmacs/")
+	  (t (error "Unknown Emacs version %s" version))))))
+
+(defconst config:init-file (concat config:base-dir "init.el"))
+(defconst config:init-dir (concat config:base-dir "init.d/"))
+(defconst config:config-dir (concat config:base-dir "config/"))
+(defconst config:data-dir (concat config:base-dir "data/"))
+(defconst config:custom-file (concat config:base-dir "custom.el"))
+
+(defun init:require (name)
+  (require (intern (format "init:%s" name))
+		   (expand-file-name (format "%s/%s" config:init-dir name))))
+
+(defun init:provide (name)
+  (provide (intern (format "init:%s" name))))
+
+(setq user-init-file config:custom-file)
+(setq custom-file config:custom-file)
+(load custom-file)
+(load config:init-file)

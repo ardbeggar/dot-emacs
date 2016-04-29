@@ -1,0 +1,8 @@
+#! /bin/sh
+
+for d in *.dot; do
+    s="`pwd`/$d"
+    t="${HOME}/.`echo $d|sed 's/\.dot$//g'`"
+    rm -rf "$t"
+    ln -s "$s" "$t"
+done
