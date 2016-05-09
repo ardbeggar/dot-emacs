@@ -12,7 +12,7 @@
 ;(init:require 'ljupdate)
 ;(init:require 'tuareg-mode)
 ;(init:require 'auctex)
-;(init:require 'haskell-mode)
+(init:require 'haskell-mode)
 (init:require 'erlang)
 ;(init:require 'jabber)
 ;(init:require 'sicp)
