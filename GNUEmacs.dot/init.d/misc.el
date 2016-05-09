@@ -5,6 +5,4 @@
   (font-lock-add-keywords nil
    '(("\\<\\(FIXME\\|TODO\\|NB\\):" 1 font-lock-warning-face prepend))))
 
-(require 'shell-command)
-
 (init:provide 'misc)
